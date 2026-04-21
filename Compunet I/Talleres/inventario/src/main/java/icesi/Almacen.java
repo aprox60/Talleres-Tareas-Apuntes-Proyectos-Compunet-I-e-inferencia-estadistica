@@ -1,3 +1,4 @@
+package icesi; 
 public class Almacen {
     private Producto[] productos;
 
