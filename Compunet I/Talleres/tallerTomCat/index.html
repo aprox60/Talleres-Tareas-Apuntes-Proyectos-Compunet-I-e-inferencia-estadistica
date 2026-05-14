@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokédex - Taller Tomcat</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header>
+    <h1>¡Bienvenido a la Pokédex!</h1>
+    <p class="subtitulo">Explora el mundo Pokémon. Busca tu favorito o descubre uno al azar.</p>
+  </header>
+
+  <main>
+    <section class="buscador">
+      <input
+        type="text"
+        id="inputPokemon"
+        placeholder="Nombre o número (ej: pikachu, 25)"
+        autocomplete="off"
+      />
+      <button id="btnBuscar">Buscar</button>
+      <button id="btnAleatorio">Aleatorio</button>
+    </section>
+
+    <section id="resultado" class="resultado oculto">
+      <div class="card">
+        <img id="pokemonImg" src="" alt="Imagen del Pokémon" />
+        <div class="info">
+          <h2 id="pokemonNombre"></h2>
+          <p id="pokemonId"></p>
+          <div id="pokemonTipos" class="tipos"></div>
+          <ul id="pokemonStats" class="stats"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="error" class="error oculto">
+      <p>Pokémon no encontrado. Verifica el nombre o número.</p>
+    </section>
+
+    <section class="lista-section">
+      <h2>Primeros 20 Pokémon</h2>
+      <div id="lista" class="lista"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Datos obtenidos de <a href="https://pokeapi.co/" target="_blank">PokéAPI</a></p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
